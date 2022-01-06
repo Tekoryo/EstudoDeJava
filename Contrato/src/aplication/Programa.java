@@ -14,7 +14,7 @@ public class Programa {
 
 	public static void main(String[] args) throws ParseException {
 		Scanner Sc=new Scanner(System.in);
-		SimpleDateFormat Sd=new SimpleDateFormat("DD/MM/YYYY");
+		SimpleDateFormat Sd=new SimpleDateFormat("DD/MM/yyyy");
 		
 		System.out.print("Entre com o departamento: ");
 		String depatament=Sc.next();
