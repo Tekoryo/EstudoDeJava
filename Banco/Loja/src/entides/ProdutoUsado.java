@@ -7,8 +7,8 @@ import java.util.Date;
 import javax.script.SimpleScriptContext;
 
 public class ProdutoUsado extends Produto{
-    SimpleDateFormat Sd=new SimpleDateFormat();
-
+    SimpleDateFormat Sd=new SimpleDateFormat("DD/MM/yyyy")
+    ;
     private Date DataDaFabricacao;
 
     public ProdutoUsado(){
@@ -30,9 +30,9 @@ public class ProdutoUsado extends Produto{
     public String TagDePreco(){
         return String.valueOf(preco);
     }
-
+    @Override
     public String toString(){
-        return super.toString()+"(Usado) R$"+TagDePreco()+"(Fabricado em: "+Sd.format(getDataDaFabricacao())+")";
+        return super.getNome()+" (Usado) R$"+super.getpreco()+" - (Fabricado em: "+Sd.format(getDataDaFabricacao())+")";
     }
 
 }

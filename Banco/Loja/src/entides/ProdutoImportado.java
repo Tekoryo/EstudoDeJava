@@ -25,8 +25,8 @@ public class ProdutoImportado extends Produto{
         double sum=preco+TaxaAlfandegaria;
         return String.valueOf(sum);
     }
-
+    @Override
     public String toString(){
-        return super.toString()+"- R$"+TagDePreco();
+        return super.toString();
     }
 }
