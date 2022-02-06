@@ -27,13 +27,29 @@ public class Log{
         return DateLog;
     }
 
-    public void setLog(Date DateLog) {
-        this.DateLog = DateLog;
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((Nick == null) ? 0 : Nick.hashCode());
+        return result;
     }
 
     @Override
-    public String toString() {
-        return "Log [Log=" + this.DateLog + ", Nick=" + this.Nick + "]";
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Log other = (Log) obj;
+        if (Nick == null) {
+            if (other.Nick != null)
+                return false;
+        } else if (!Nick.equals(other.Nick))
+            return false;
+        return true;
     }
     
 }
